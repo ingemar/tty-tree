@@ -114,7 +114,8 @@ RSpec.describe TTY::Tree::PathWalker do
 
     expect(walker.files_count).to eq(4)
 
-    expect(walker.dirs_count).to eq(1)
+    expect(walker.dirs_count).to eq(2)
+
   end
 
   it "raises when walking non-directory" do

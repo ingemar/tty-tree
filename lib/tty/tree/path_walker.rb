@@ -87,13 +87,15 @@ module TTY
             node = last_path_index == i ? LeafNode : Node
 
             if path.directory?
-              next if @level != -1 && level + 1 > @level
+              next if @level != -1 && level > @level
 
               @nodes << node.new(sub_path, parent_path, prefix, level)
               @dirs_count += 1
 
               postfix = ':pipe'
               postfix = ':space' if i == last_path_index
+
+              next if @level != -1 && level + 1 > @level
 
               walk(path, path.children, prefix + postfix, level + 1)
             elsif path.file?
