@@ -71,6 +71,7 @@ RSpec.describe TTY::Tree::PathWalker do
       "dir1",
       "dir1/config.dat",
       "dir1/dir2",
+      "dir1/dir2/dir3",
       "dir1/dir2/file2-1.txt",
       "dir1/file1-1.txt",
       "dir1/file1-2.txt",
